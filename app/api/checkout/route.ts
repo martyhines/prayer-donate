@@ -4,7 +4,7 @@ import Stripe from 'stripe'
 // Temporary fallback for development - will be replaced with real keys later
 const stripe = process.env.STRIPE_SECRET_KEY
   ? new Stripe(process.env.STRIPE_SECRET_KEY, {
-      apiVersion: '2023-10-16',
+      apiVersion: '2023-08-16',
     })
   : null
 
