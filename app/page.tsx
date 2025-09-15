@@ -84,7 +84,7 @@ export default function Home() {
                     src="/screenshots/prayer-app-prayers.PNG"
                     alt="Prayer App - Main Prayer View"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -102,7 +102,7 @@ export default function Home() {
                     src="/screenshots/prayer-app-community.PNG"
                     alt="Prayer App - Community Features"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -120,7 +120,7 @@ export default function Home() {
                     src="/screenshots/prayer-app-timer.PNG"
                     alt="Prayer App - Meditation Timer"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -138,7 +138,7 @@ export default function Home() {
                     src="/screenshots/prayer-app-journal.PNG"
                     alt="Prayer App - Prayer Journal"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -156,7 +156,7 @@ export default function Home() {
                     src="/screenshots/prayer-app-audio-resources.PNG"
                     alt="Prayer App - Audio Resources"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -174,7 +174,7 @@ export default function Home() {
                     src="/screenshots/prayer-app-amb-settings.PNG"
                     alt="Prayer App - Ambient Settings"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -192,7 +192,7 @@ export default function Home() {
                     src="/screenshots/prayer-app-groupsview.PNG"
                     alt="Prayer App - Prayer Groups"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -210,7 +210,7 @@ export default function Home() {
                     src="/screenshots/prayer-app-reminders.PNG"
                     alt="Prayer App - Prayer Reminders"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
