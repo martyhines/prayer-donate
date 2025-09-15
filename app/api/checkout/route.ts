@@ -1,13 +1,24 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2023-10-16',
-})
+// Temporary fallback for development - will be replaced with real keys later
+const stripe = process.env.STRIPE_SECRET_KEY
+  ? new Stripe(process.env.STRIPE_SECRET_KEY, {
+      apiVersion: '2023-10-16',
+    })
+  : null
 
 export async function POST(request: NextRequest) {
   try {
     const { amount, email, name } = await request.json()
+
+    // Check if Stripe is configured
+    if (!stripe) {
+      return NextResponse.json(
+        { error: 'Payment system not configured yet. Please check back soon!' },
+        { status: 503 }
+      )
+    }
 
     // Validate the amount (minimum $1, maximum $10,000)
     if (!amount || amount < 100 || amount > 1000000) {
@@ -18,7 +29,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Create a checkout session
-    const session = await stripe.checkout.sessions.create({
+    const session = await stripe!.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
         {
