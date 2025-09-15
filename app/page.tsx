@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <main className="min-h-screen bg-gradient-to-br from-blue-200 to-indigo-300">
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
         <header className="text-center mb-16">
@@ -68,11 +68,184 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Screenshots Placeholder */}
+        {/* Screenshots Gallery */}
         <section className="text-center mb-16">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-8">See It In Action</h2>
-          <div className="bg-gray-200 rounded-lg p-12 max-w-2xl mx-auto">
-            <p className="text-gray-600">Screenshots will be displayed here</p>
+          <h2 className="text-3xl font-semibold text-gray-800 mb-4">See It In Action</h2>
+          <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+            Discover all the powerful features of our prayer app that help deepen your spiritual journey
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {/* Main Prayer View */}
+            <div className="group">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="relative h-64">
+                  <Image
+                    src="/screenshots/prayer-app-prayers.PNG"
+                    alt="Prayer App - Main Prayer View"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Daily Prayers</h3>
+                  <p className="text-gray-600">Access curated prayers and scripture readings for your daily spiritual practice</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Community Features */}
+            <div className="group">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="relative h-64">
+                  <Image
+                    src="/screenshots/prayer-app-community.PNG"
+                    alt="Prayer App - Community Features"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Community</h3>
+                  <p className="text-gray-600">Connect with fellow believers and share prayer requests in our supportive community</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Prayer Timer */}
+            <div className="group">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="relative h-64">
+                  <Image
+                    src="/screenshots/prayer-app-timer.PNG"
+                    alt="Prayer App - Meditation Timer"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Meditation Timer</h3>
+                  <p className="text-gray-600">Guided meditation sessions with customizable timers for focused prayer time</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Prayer Journal */}
+            <div className="group">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="relative h-64">
+                  <Image
+                    src="/screenshots/prayer-app-journal.PNG"
+                    alt="Prayer App - Prayer Journal"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Prayer Journal</h3>
+                  <p className="text-gray-600">Keep track of your spiritual journey and answered prayers in your personal journal</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Audio Resources */}
+            <div className="group">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="relative h-64">
+                  <Image
+                    src="/screenshots/prayer-app-audio-resources.PNG"
+                    alt="Prayer App - Audio Resources"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Audio Resources</h3>
+                  <p className="text-gray-600">Listen to guided prayers, worship music, and spiritual teachings on the go</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Ambient Settings */}
+            <div className="group">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="relative h-64">
+                  <Image
+                    src="/screenshots/prayer-app-amb-settings.PNG"
+                    alt="Prayer App - Ambient Settings"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Ambient Settings</h3>
+                  <p className="text-gray-600">Customize your prayer environment with ambient sounds and lighting preferences</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Prayer Groups */}
+            <div className="group">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="relative h-64">
+                  <Image
+                    src="/screenshots/prayer-app-groupsview.PNG"
+                    alt="Prayer App - Prayer Groups"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Prayer Groups</h3>
+                  <p className="text-gray-600">Join prayer groups and participate in communal prayer sessions with others</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Reminders */}
+            <div className="group">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="relative h-64">
+                  <Image
+                    src="/screenshots/prayer-app-reminders.PNG"
+                    alt="Prayer App - Prayer Reminders"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Smart Reminders</h3>
+                  <p className="text-gray-600">Never miss your prayer time with intelligent reminders and notifications</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Ambient Mode */}
+            <div className="group">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="relative h-64">
+                  <Image
+                    src="/screenshots/prayer-app-ambient.PNG"
+                    alt="Prayer App - Ambient Prayer Mode"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Ambient Mode</h3>
+                  <p className="text-gray-600">Create a peaceful prayer atmosphere with ambient lighting and soundscapes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12">
+            <Link
+              href="/donate"
+              className="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-indigo-700 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Support This Ministry
+            </Link>
           </div>
         </section>
 
