@@ -93,7 +93,7 @@ export function DonateWidget() {
                 className={`py-3 px-4 border rounded-lg text-center font-medium transition-colors ${
                   amount === preset.toString()
                     ? 'border-indigo-500 bg-indigo-50 text-indigo-700'
-                    : 'border-gray-300 hover:border-gray-400'
+                    : 'border-gray-300 hover:border-gray-400 text-gray-700'
                 }`}
               >
                 ${preset}
@@ -112,7 +112,7 @@ export function DonateWidget() {
               placeholder="Enter custom amount"
               value={customAmount}
               onChange={(e) => handleCustomAmountChange(e.target.value)}
-              className="block w-full pl-7 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+              className="block w-full pl-7 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-gray-900"
             />
           </div>
         </div>
@@ -128,7 +128,7 @@ export function DonateWidget() {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="block w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+              className="block w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-gray-900"
               placeholder="Enter your full name"
             />
           </div>
@@ -143,7 +143,7 @@ export function DonateWidget() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="block w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+              className="block w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-gray-900"
               placeholder="Enter your email address"
             />
           </div>
