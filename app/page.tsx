@@ -68,7 +68,7 @@ export default function Home() {
         </section>
 
         {/* Screenshots Gallery */}
-        <section className="text-center mb-16 pt-8">
+        <section className="text-center mb-16">
           <h2 className="text-3xl font-semibold text-gray-800 mb-4">See It In Action</h2>
           <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
             Discover all the powerful features of our prayer app that help deepen your spiritual journey
@@ -78,7 +78,7 @@ export default function Home() {
             {/* Main Prayer View */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96">
+                <div className="relative h-96 pt-4">
                   <Image
                     src="/screenshots/prayer-app-prayers.PNG"
                     alt="Prayer App - Main Prayer View"
@@ -96,7 +96,7 @@ export default function Home() {
             {/* Community Features */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96">
+                <div className="relative h-96 pt-4">
                   <Image
                     src="/screenshots/prayer-app-community.PNG"
                     alt="Prayer App - Community Features"
@@ -114,7 +114,7 @@ export default function Home() {
             {/* Prayer Timer */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96">
+                <div className="relative h-96 pt-4">
                   <Image
                     src="/screenshots/prayer-app-timer.PNG"
                     alt="Prayer App - Meditation Timer"
@@ -132,7 +132,7 @@ export default function Home() {
             {/* Prayer Journal */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96">
+                <div className="relative h-96 pt-4">
                   <Image
                     src="/screenshots/prayer-app-journal.PNG"
                     alt="Prayer App - Prayer Journal"
@@ -150,7 +150,7 @@ export default function Home() {
             {/* Audio Resources */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96">
+                <div className="relative h-96 pt-4">
                   <Image
                     src="/screenshots/prayer-app-audio-resources.PNG"
                     alt="Prayer App - Audio Resources"
@@ -168,7 +168,7 @@ export default function Home() {
             {/* Ambient Settings */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96">
+                <div className="relative h-96 pt-4">
                   <Image
                     src="/screenshots/prayer-app-amb-settings.PNG"
                     alt="Prayer App - Ambient Settings"
@@ -186,7 +186,7 @@ export default function Home() {
             {/* Prayer Groups */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96">
+                <div className="relative h-96 pt-4">
                   <Image
                     src="/screenshots/prayer-app-groupsview.PNG"
                     alt="Prayer App - Prayer Groups"
@@ -204,7 +204,7 @@ export default function Home() {
             {/* Reminders */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96">
+                <div className="relative h-96 pt-4">
                   <Image
                     src="/screenshots/prayer-app-reminders.PNG"
                     alt="Prayer App - Prayer Reminders"
@@ -222,7 +222,7 @@ export default function Home() {
             {/* Ambient Mode */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96">
+                <div className="relative h-96 pt-4">
                   <Image
                     src="/screenshots/prayer-app-ambient.PNG"
                     alt="Prayer App - Ambient Prayer Mode"
