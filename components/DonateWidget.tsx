@@ -14,6 +14,7 @@ export function DonateWidget() {
   const [email, setEmail] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState('')
+  const [donationType, setDonationType] = useState<'one-time' | 'monthly'>('one-time')
 
   const handleAmountSelect = (presetAmount: number) => {
     setAmount(presetAmount.toString())
@@ -59,6 +60,7 @@ export function DonateWidget() {
           amount: Math.round(donationAmount * 100), // Convert to cents
           email,
           name,
+          donationType,
         }),
       })
 
@@ -92,8 +94,8 @@ export function DonateWidget() {
                 onClick={() => handleAmountSelect(preset)}
                 className={`py-3 px-4 border rounded-lg text-center font-medium transition-colors ${
                   amount === preset.toString()
-                    ? 'border-indigo-500 bg-indigo-50 text-indigo-700'
-                    : 'border-gray-300 hover:border-gray-400 text-gray-700'
+                    ? 'border-indigo-500 bg-indigo-50 text-indigo-500'
+                    : 'border-gray-300 hover:border-gray-400 text-indigo-700'
                 }`}
               >
                 ${preset}
@@ -115,6 +117,42 @@ export function DonateWidget() {
               className="block w-full pl-7 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-gray-900"
             />
           </div>
+        </div>
+
+        {/* Donation Frequency */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-3">
+            Donation Frequency
+          </label>
+          <div className="flex bg-gray-100 rounded-lg p-1">
+            <button
+              type="button"
+              onClick={() => setDonationType('one-time')}
+              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+                donationType === 'one-time'
+                  ? 'bg-white text-indigo-700 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              One-time Gift
+            </button>
+            <button
+              type="button"
+              onClick={() => setDonationType('monthly')}
+              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+                donationType === 'monthly'
+                  ? 'bg-white text-indigo-700 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Monthly
+            </button>
+          </div>
+          {donationType === 'monthly' && (
+            <p className="text-xs text-gray-500 mt-2">
+              💝 Your monthly donation helps provide consistent support for our prayer ministry
+            </p>
+          )}
         </div>
 
         {/* Personal Information */}
@@ -155,7 +193,7 @@ export function DonateWidget() {
           disabled={isLoading || !getFinalAmount()}
           className="w-full bg-indigo-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
-          {isLoading ? 'Processing...' : `Donate $${getFinalAmount().toFixed(2)}`}
+          {isLoading ? 'Processing...' : `${donationType === 'monthly' ? 'Start Monthly' : 'Donate'} $${getFinalAmount().toFixed(2)}${donationType === 'monthly' ? '/month' : ''}`}
         </button>
 
         {/* Message */}

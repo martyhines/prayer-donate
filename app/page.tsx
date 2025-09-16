@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-200 to-indigo-300">
+    <main className="min-h-screen bg-gradient-to-br from-white to-blue-600">
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
         <header className="text-center mb-16">
@@ -11,8 +11,7 @@ export default function Home() {
             Prayer Donation
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Support meaningful prayer initiatives and help spread hope and faith
-            through generous contributions from our community.
+          No ads. No in-app purchases. Just prayer, scripture, and peace — supported by donors.
           </p>
         </header>
 

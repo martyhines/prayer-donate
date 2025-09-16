@@ -10,7 +10,7 @@ const stripe = process.env.STRIPE_SECRET_KEY
 
 export async function POST(request: NextRequest) {
   try {
-    const { amount, email, name } = await request.json()
+    const { amount, email, name, donationType } = await request.json()
 
     // Check if Stripe is configured
     if (!stripe) {
@@ -29,9 +29,49 @@ export async function POST(request: NextRequest) {
     }
 
     // Create a checkout session
-    const session = await stripe!.checkout.sessions.create({
+    const isMonthly = donationType === 'monthly'
+
+    const sessionConfig: any = {
       payment_method_types: ['card'],
-      line_items: [
+      customer_email: email,
+      success_url: `${request.nextUrl.origin}/donate?success=true&session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${request.nextUrl.origin}/donate?canceled=true`,
+      metadata: {
+        name: name || 'Anonymous Donor',
+        donation_type: 'prayer_support',
+        frequency: donationType || 'one-time',
+      },
+    }
+
+    if (isMonthly) {
+      // Monthly recurring donation
+      sessionConfig.line_items = [
+        {
+          price_data: {
+            currency: 'usd',
+            product_data: {
+              name: 'Monthly Prayer Donation',
+              description: 'Monthly support for prayer initiatives and community programs',
+            },
+            unit_amount: amount,
+            recurring: {
+              interval: 'month',
+            },
+          },
+          quantity: 1,
+        },
+      ]
+      sessionConfig.mode = 'subscription'
+      sessionConfig.subscription_data = {
+        metadata: {
+          name: name || 'Anonymous Donor',
+          donation_type: 'prayer_support',
+          frequency: 'monthly',
+        },
+      }
+    } else {
+      // One-time donation
+      sessionConfig.line_items = [
         {
           price_data: {
             currency: 'usd',
@@ -43,22 +83,18 @@ export async function POST(request: NextRequest) {
           },
           quantity: 1,
         },
-      ],
-      mode: 'payment',
-      success_url: `${request.nextUrl.origin}/donate?success=true&session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${request.nextUrl.origin}/donate?canceled=true`,
-      customer_email: email,
-      metadata: {
-        name: name || 'Anonymous Donor',
-        donation_type: 'prayer_support',
-      },
-      payment_intent_data: {
+      ]
+      sessionConfig.mode = 'payment'
+      sessionConfig.payment_intent_data = {
         metadata: {
           name: name || 'Anonymous Donor',
           donation_type: 'prayer_support',
+          frequency: 'one-time',
         },
-      },
-    })
+      }
+    }
+
+    const session = await stripe!.checkout.sessions.create(sessionConfig)
 
     return NextResponse.json({
       sessionId: session.id,
