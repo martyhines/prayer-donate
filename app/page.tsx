@@ -68,7 +68,7 @@ export default function Home() {
         </section>
 
         {/* Screenshots Gallery */}
-        <section className="text-center mb-16">
+        <section className="text-center mb-16 pt-8">
           <h2 className="text-3xl font-semibold text-gray-800 mb-4">See It In Action</h2>
           <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
             Discover all the powerful features of our prayer app that help deepen your spiritual journey
