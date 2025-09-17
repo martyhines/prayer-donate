@@ -10,7 +10,7 @@ export default function DonatePage() {
               Make a Donation
             </h1>
             <p className="text-lg text-gray-600">
-              Your generous contribution helps support prayer initiatives and
+              Your generous one-time or monthly contribution helps support prayer initiatives and
               spiritual growth programs in our community.
             </p>
           </div>

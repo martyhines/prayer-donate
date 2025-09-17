@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
     const sessionConfig: any = {
       payment_method_types: ['card'],
       customer_email: email,
-      success_url: `${request.nextUrl.origin}/donate?success=true&session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `${request.nextUrl.origin}/thank-you?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${request.nextUrl.origin}/donate?canceled=true`,
       metadata: {
         name: name || 'Anonymous Donor',
