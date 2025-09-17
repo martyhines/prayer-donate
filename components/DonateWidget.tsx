@@ -5,7 +5,7 @@ import { loadStripe } from '@stripe/stripe-js'
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
 
-const PRESET_AMOUNTS = [25, 50, 100, 250, 500]
+const PRESET_AMOUNTS = [10, 15, 25, 50, 100, 250, 500, 750, 1000]
 
 export function DonateWidget() {
   const [amount, setAmount] = useState('')

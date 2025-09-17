@@ -8,7 +8,7 @@ export default function Home() {
         {/* Header */}
         <header className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
-            Prayer Donation
+            Prayer App Donation
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           No ads. No in-app purchases. Just prayer, scripture, and peace — supported by donors.
@@ -78,12 +78,13 @@ export default function Home() {
             {/* Main Prayer View */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96 !pt-4">
+                <div className="relative">
                   <Image
                     src="/screenshots/prayer-app-prayers.PNG"
                     alt="Prayer App - Main Prayer View"
-                    fill
-                    className="object-contain group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -96,12 +97,13 @@ export default function Home() {
             {/* Community Features */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96 !pt-4">
+                <div className="relative">
                   <Image
                     src="/screenshots/prayer-app-community.PNG"
                     alt="Prayer App - Community Features"
-                    fill
-                    className="object-contain group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -114,12 +116,13 @@ export default function Home() {
             {/* Prayer Timer */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96 !pt-4">
+                <div className="relative">
                   <Image
                     src="/screenshots/prayer-app-timer.PNG"
                     alt="Prayer App - Meditation Timer"
-                    fill
-                    className="object-contain group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -132,12 +135,13 @@ export default function Home() {
             {/* Prayer Journal */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96 !pt-4">
+                <div className="relative">
                   <Image
                     src="/screenshots/prayer-app-journal.PNG"
                     alt="Prayer App - Prayer Journal"
-                    fill
-                    className="object-contain group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -150,12 +154,13 @@ export default function Home() {
             {/* Audio Resources */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96 !pt-4">
+                <div className="relative">
                   <Image
                     src="/screenshots/prayer-app-audio-resources.PNG"
                     alt="Prayer App - Audio Resources"
-                    fill
-                    className="object-contain group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -168,12 +173,13 @@ export default function Home() {
             {/* Ambient Settings */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96 !pt-4">
+                <div className="relative">
                   <Image
                     src="/screenshots/prayer-app-amb-settings.PNG"
                     alt="Prayer App - Ambient Settings"
-                    fill
-                    className="object-contain group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -186,12 +192,13 @@ export default function Home() {
             {/* Prayer Groups */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96 !pt-4">
+                <div className="relative">
                   <Image
                     src="/screenshots/prayer-app-groupsview.PNG"
                     alt="Prayer App - Prayer Groups"
-                    fill
-                    className="object-contain group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -204,12 +211,13 @@ export default function Home() {
             {/* Reminders */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96 !pt-4">
+                <div className="relative">
                   <Image
                     src="/screenshots/prayer-app-reminders.PNG"
                     alt="Prayer App - Prayer Reminders"
-                    fill
-                    className="object-contain group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -222,12 +230,13 @@ export default function Home() {
             {/* Ambient Mode */}
             <div className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-96 !pt-4">
+                <div className="relative">
                   <Image
                     src="/screenshots/prayer-app-ambient.PNG"
                     alt="Prayer App - Ambient Prayer Mode"
-                    fill
-                    className="object-contain group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
