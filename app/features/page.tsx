@@ -224,7 +224,7 @@ export default function FeaturesPage() {
                   </p>
                   <Link
                     href="/donate"
-                    className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-indigo-700 transition-colors shadow-lg hover:shadow-xl"
+                    className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-orange-700 transition-colors shadow-lg hover:shadow-xl"
                   >
                     Support This Ministry
                   </Link>
