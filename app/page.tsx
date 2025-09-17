@@ -39,6 +39,9 @@ export default function Home() {
                 Learn About the App
               </Link>
             </div>
+            <small className="text-gray-600 mb-8 padding-top-4">
+              *This donation is not tax deductible, as we are not a 501(c)(3) organization yet.
+            </small>
           </div>
         </section>
 
@@ -258,7 +261,7 @@ export default function Home() {
           <div className="mt-12">
             <Link
               href="/donate"
-              className="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-indigo-700 transition-colors shadow-lg hover:shadow-xl"
+              className="inline-block bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-orange-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Support This Ministry
             </Link>

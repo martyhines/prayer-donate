@@ -191,7 +191,7 @@ export function DonateWidget() {
         <button
           type="submit"
           disabled={isLoading || !getFinalAmount()}
-          className="w-full bg-indigo-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="w-full bg-orange-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           {isLoading ? 'Processing...' : `${donationType === 'monthly' ? 'Start Monthly' : 'Donate'} $${getFinalAmount().toFixed(2)}${donationType === 'monthly' ? '/month' : ''}`}
         </button>

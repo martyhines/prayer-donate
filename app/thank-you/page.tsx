@@ -139,8 +139,8 @@ export default function ThankYouPage() {
                     2
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-800 mb-1">Tax Receipt</h4>
-                    <p className="text-gray-600">A tax-deductible receipt will be emailed for your records</p>
+                    <h4 className="text-lg font-semibold text-gray-800 mb-1">Receipt</h4>
+                    <p className="text-gray-600">A receipt will be emailed for your records</p>
                   </div>
                 </div>
 
@@ -210,7 +210,7 @@ export default function ThankYouPage() {
 
               <Link
                 href="/features"
-                className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors"
+                className="bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors"
               >
                 Learn About the App
               </Link>
@@ -246,7 +246,7 @@ export default function ThankYouPage() {
             </Link>
             <Link
               href="/features"
-              className="bg-indigo-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-indigo-700 transition-colors"
+              className="bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-orange-700 transition-colors"
             >
               Learn About the App
             </Link>
