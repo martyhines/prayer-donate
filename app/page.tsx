@@ -23,14 +23,22 @@ export default function Home() {
             </h2>
             <p className="text-lg text-gray-600 mb-8">
               Your donation helps fund prayer groups, community outreach, and
-              spiritual development programs that bring people closer to faith.
+              spiritual development of potentially millions of people and bring them closer to faith in our Lord Jesus Christ.
             </p>
-            <Link
-              href="/donate"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-indigo-700 transition-colors"
-            >
-              Donate Now
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                href="/donate"
+                className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-orange-700 transition-colors"
+              >
+                Donate Now
+              </Link>
+              <Link
+                href="/features"
+                className="inline-block bg-white text-orange-600 border-2 border-orange-600 px-8 py-3 rounded-lg text-lg font-medium hover:bg-orange-50 transition-colors"
+              >
+                Learn About the App
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -260,6 +268,8 @@ export default function Home() {
         {/* Footer */}
         <footer className="text-center text-gray-600">
           <div className="flex justify-center space-x-8 mb-4">
+            <Link href="/features" className="hover:text-indigo-600">App Features</Link>
+            <Link href="/donate" className="hover:text-indigo-600">Donate</Link>
             <Link href="/privacy" className="hover:text-indigo-600">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-indigo-600">Terms of Service</Link>
             <Link href="/refund" className="hover:text-indigo-600">Refund Policy</Link>

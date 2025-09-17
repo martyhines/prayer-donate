@@ -5,7 +5,7 @@ import { loadStripe } from '@stripe/stripe-js'
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
 
-const PRESET_AMOUNTS = [10, 15, 25, 50, 100, 250, 500, 750, 1000]
+const PRESET_AMOUNTS = [10, 25, 50, 100, 250, 500, 750, 1000, 10000]
 
 export function DonateWidget() {
   const [amount, setAmount] = useState('')
@@ -150,7 +150,7 @@ export function DonateWidget() {
           </div>
           {donationType === 'monthly' && (
             <p className="text-xs text-gray-500 mt-2">
-              💝 Your monthly donation helps provide consistent support for our prayer ministry
+              💝 Your monthly donation helps provide consistent support for our prayer app ministry
             </p>
           )}
         </div>
