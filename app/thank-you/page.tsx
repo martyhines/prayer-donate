@@ -1,6 +1,26 @@
+'use client'
+
 import Link from 'next/link'
 
 export default function ThankYouPage() {
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Prayer App Donation',
+        text: 'Support the development of a unique prayer app that builds genuine prayer communities',
+        url: window.location.origin
+      }).catch(() => {
+        // Fallback to clipboard
+        navigator.clipboard.writeText(window.location.origin)
+        alert('Link copied to clipboard!')
+      })
+    } else {
+      // Fallback for browsers without native sharing
+      navigator.clipboard.writeText(window.location.origin)
+      alert('Link copied to clipboard!')
+    }
+  }
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
       <div className="container mx-auto px-4 py-16">
@@ -182,18 +202,7 @@ export default function ThankYouPage() {
 
             <div className="flex flex-wrap justify-center gap-4">
               <button
-                onClick={() => {
-                  if (navigator.share) {
-                    navigator.share({
-                      title: 'Prayer App Donation',
-                      text: 'Support the development of a unique prayer app that builds genuine prayer communities',
-                      url: window.location.origin
-                    })
-                  } else {
-                    navigator.clipboard.writeText(window.location.origin)
-                    alert('Link copied to clipboard!')
-                  }
-                }}
+                onClick={handleShare}
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Share This Ministry
